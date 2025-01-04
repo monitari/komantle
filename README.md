@@ -1,4 +1,5 @@
 # KOMANTLE
+![image](https://github.com/user-attachments/assets/1c4ec58e-c2e9-4289-9765-84744b22a6e4)
 
 KOMANTLE is a word similarity guessing game inspired by the original 꼬맨틀 site. This project uses JavaScript to replicate the core functionality of the game.
 
