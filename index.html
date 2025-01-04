@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꼬맨틀 - 단어 유사도 추측 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>꼬맨틀 - 단어 유사도 추측 게임</h1>
+            <p class="subtitle">오늘의 단어를 맞혀보세요!</p>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <input type="text" id="wordInput" placeholder="단어를 입력해 보세요" autocomplete="off">
+                <button id="submitBtn">제출하기</button>
+            </div>
+
+            <div class="stats-container hidden" id="statsContainer">
+                <h2>게임 통계</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">시도한 횟수</span>
+                        <span class="stat-value" id="attempts">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">평균 유사도</span>
+                        <span class="stat-value" id="avgSimilarity">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guesses-container">
+                <div class="guesses-header">
+                    <span class="rank-header">순위</span>
+                    <span class="word-header">단어</span>
+                    <span class="similarity-header">유사도</span>
+                    <span class="progress-header">진행도</span>
+                </div>
+                <div id="guessesList" class="guesses-list"></div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="helpBtn" class="help-btn">게임 설명</button>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>게임 설명</h2>
+                    <p>꼬맨틀은 오늘의 단어를 맞히는 게임입니다. 단어를 추측하면 정답 단어와의 유사도를 알려드립니다.</p>
+                    <p>유사도는 0에서 +100 사이의 점수로 표시되며, 점수가 높을수록 정답에 가깝습니다.</p>
+                    <p>상위 1,000개의 유사한 단어 안에 들면 순위도 함께 표시됩니다.</p>
+                    <p>사실 로컬 환경인지라 유사도 계산은 그냥 없다고 생각하시면 됩니다. 그냥 놀아주세요.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
